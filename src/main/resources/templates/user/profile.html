@@ -1,0 +1,32 @@
+<main>
+    <div class="container body-container">
+        <div class="row">
+            <div id="main" class="col-sm-9">
+                <div>
+                    <p>
+                        <label class="col-sm-4 control-label" >Email</label>
+                        <span th:text="${user.email}"></span>
+                    </p>
+                    <p>
+                        <label class="col-sm-4 control-label" >Name</label>
+
+                        <span th:text="${user.fullName}"></span>
+                    </p>
+                    <p>
+                        <label class="col-sm-4 control-label" >Address</label>
+
+                        <span th:text="${user.address}"></span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="col-sm-4 col-sm-offset-4">
+            <th:block sec:authorize="isAuthenticated()">
+                <a class="btn btn-success btn-xs" th:href="@{/user/edit/{id}(id=${user.id})}">Edit</a>
+            </th:block>
+            <a class="btn btn-default btn-xs" th:href="@{/}">back &raquo;</a>
+        </div>
+    </footer>
+</main>
