@@ -4,15 +4,15 @@ ColWidths_connform.ListSessions<|||>1<|||>163,50,50,50,50,50,53
 ColsVisible_connform.ListSessions<|||>1<|||>0
 ColPositions_connform.ListSessions<|||>1<|||>0,1,2,3,4,5,6
 ColSort_connform.ListSessions<|||>1<|||>0,0
-ColWidths_frmTableEditor.listColumns<|||>1<|||>38,100,156,90,60,65,50,119,130,140,100,100
+ColWidths_frmTableEditor.listColumns<|||>1<|||>70,100,156,90,60,65,50,119,130,140,100,100
 ColsVisible_frmTableEditor.listColumns<|||>1<|||>0,1,2,3,4,5,6,7,8,9,10,11
 ColPositions_frmTableEditor.listColumns<|||>1<|||>0,1,2,3,4,5,6,7,8,9,10,11
 ColSort_frmTableEditor.listColumns<|||>1<|||>-1,0
-ColWidths_frmTableEditor.treeIndexes<|||>1<|||>341,100,80
+ColWidths_frmTableEditor.treeIndexes<|||>1<|||>324,100,80
 ColsVisible_frmTableEditor.treeIndexes<|||>1<|||>0,1,2
 ColPositions_frmTableEditor.treeIndexes<|||>1<|||>0,1,2
 ColSort_frmTableEditor.treeIndexes<|||>1<|||>-1,0
-ColWidths_frmTableEditor.listForeignKeys<|||>1<|||>99,80,100,80,80,80
+ColWidths_frmTableEditor.listForeignKeys<|||>1<|||>82,80,100,80,80,80
 ColsVisible_frmTableEditor.listForeignKeys<|||>1<|||>0,1,2,3,4,5
 ColPositions_frmTableEditor.listForeignKeys<|||>1<|||>0,1,2,3,4,5
 ColSort_frmTableEditor.listForeignKeys<|||>1<|||>-1,0
@@ -35,7 +35,7 @@ ColWidths_MainForm.ListStatus<|||>1<|||>160,275,100,100
 ColsVisible_MainForm.ListStatus<|||>1<|||>0,1,2,3
 ColPositions_MainForm.ListStatus<|||>1<|||>0,1,2,3
 ColSort_MainForm.ListStatus<|||>1<|||>0,0
-ColWidths_MainForm.ListProcesses<|||>1<|||>70,80,80,80,80,50,50,145
+ColWidths_MainForm.ListProcesses<|||>1<|||>70,80,80,80,80,50,50,154
 ColsVisible_MainForm.ListProcesses<|||>1<|||>0,1,2,3,4,5,6,7
 ColPositions_MainForm.ListProcesses<|||>1<|||>0,1,2,3,4,5,6,7
 ColSort_MainForm.ListProcesses<|||>1<|||>0,1
@@ -49,11 +49,11 @@ ColPositions_MainForm.ListTables<|||>1<|||>0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15
 ColSort_MainForm.ListTables<|||>1<|||>0,0
 MainWinLeft<|||>3<|||>115
 MainWinTop<|||>3<|||>109
-Servers\Unnamed\SessionCreated<|||>1<|||>2016-11-22 15:25:23
+Servers\Unnamed\SessionCreated<|||>1<|||>2016-12-15 16:06:22
 Servers\Unnamed\Host<|||>1<|||>127.0.0.1
 Servers\Unnamed\WindowsAuth<|||>3<|||>0
 Servers\Unnamed\User<|||>1<|||>root
-Servers\Unnamed\Password<|||>1<|||>8
+Servers\Unnamed\Password<|||>1<|||>7
 Servers\Unnamed\LoginPrompt<|||>3<|||>0
 Servers\Unnamed\Port<|||>1<|||>3306
 Servers\Unnamed\NetType<|||>3<|||>0
@@ -68,7 +68,7 @@ Servers\Unnamed\StartupScriptFilename<|||>1<|||>
 Servers\Unnamed\SSHtunnelHost<|||>1<|||>
 Servers\Unnamed\SSHtunnelHostPort<|||>3<|||>0
 Servers\Unnamed\SSHtunnelUser<|||>1<|||>
-Servers\Unnamed\SSHtunnelPassword<|||>1<|||>1
+Servers\Unnamed\SSHtunnelPassword<|||>1<|||>8
 Servers\Unnamed\SSHtunnelTimeout<|||>3<|||>4
 Servers\Unnamed\SSHtunnelPrivateKey<|||>1<|||>
 Servers\Unnamed\SSHtunnelPort<|||>3<|||>3307
@@ -78,8 +78,8 @@ Servers\Unnamed\SSL_Cert<|||>1<|||>
 Servers\Unnamed\SSL_CA<|||>1<|||>
 Servers\Unnamed\SSL_Cipher<|||>1<|||>
 Servers\Unnamed\ServerVersionFull<|||>1<|||>10.1.13-MariaDB - mariadb.org binary distribution
-Servers\Unnamed\ConnectCount<|||>3<|||>7
+Servers\Unnamed\ConnectCount<|||>3<|||>1
 Servers\Unnamed\ServerVersion<|||>3<|||>100113
-Servers\Unnamed\LastConnect<|||>1<|||>2016-12-15 10:27:01
+Servers\Unnamed\LastConnect<|||>1<|||>2016-12-15 16:06:25
 Servers\Unnamed\lastUsedDB<|||>1<|||>java_blog
-Servers\Unnamed\java_blog|roles\Sort<|||>1<|||>0_name|
+Servers\Unnamed\java_blog|articles\Sort<|||>1<|||>1_description|

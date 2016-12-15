@@ -6908,4 +6908,9 @@ input:focus,
 .panel-default .panel-footer {
   color: #98978b;
 }
+.description
+{
+  background-color: #93c54b;
+  border-color: #98978b;
+}
 

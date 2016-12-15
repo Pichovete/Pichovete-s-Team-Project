@@ -9,6 +9,8 @@ public class ArticleBindingModel {
     @NotNull
     private String content;
 
+    private String description;
+
     private Integer categoryId;
 
     private String tagString;
@@ -30,11 +32,18 @@ public class ArticleBindingModel {
     }
 
     public String getContent() {
-        return content;
+        return content.substring(32);
     }
 
     public void setContent(String content) {
         this.content = content;
+    }
+    public String getDescription(){
+        return description;
+    }
+    public void setDescription(String description)
+    {
+        this.description=description;
     }
 
     public String getTagString() {

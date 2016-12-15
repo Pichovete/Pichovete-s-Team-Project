@@ -12,15 +12,18 @@ public class Article {
 
     private String content;
 
+    private String description;
+
     private User author;
 
     private Category category;
 
     private Set<Tag> tags;
 
-    public Article(String title, String content, User author, Category category, HashSet<Tag> tags) {
+    public Article(String title, String content,String description, User author, Category category, HashSet<Tag> tags) {
         this.title = title;
         this.content = content;
+        this.description=description;
         this.author = author;
         this.category = category;
         this.tags = tags;
@@ -57,6 +60,14 @@ public class Article {
     public void setContent(String content) {
         this.content = content;
     }
+    @Column(columnDefinition = "text", nullable = true)
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
 
     @ManyToOne()
     @JoinColumn(nullable = false, name = "authorId")
@@ -70,7 +81,7 @@ public class Article {
 
     @Transient
     public String getSummary() {
-        return this.getContent().substring(0, this.getContent().length()/2) + "...";
+        return this.getDescription().substring(0, this.getDescription().length()/2) + "...";
     }
 
     @ManyToOne()

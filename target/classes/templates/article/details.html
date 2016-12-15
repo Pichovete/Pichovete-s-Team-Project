@@ -2,13 +2,28 @@
     <div class="container body-content">
         <div class="row">
             <div class="col-md-12">
-                <article>
+                <div>
                     <header>
                         <h2 th:text="${article.title}"></h2>
                     </header>
+                    <table>
+                        <tr>
+                            <td>
+                                <iframe width="560" height="315" th:src="@{https://www.youtube.com/embed/{url} (url=${article.content})}" frameborder="1" allowfullscreen="1"></iframe>
+                            </td>
+                            <td align="top" width="400">
+                                <div class="panel panel-default">
+                                    <div class="panel-body">
+                                        <p th:text="${article.description}"> </p>
+                                    </div>
+                                </div>
 
-                    <p th:text="${article.content}"> </p>
+                            </td>
+                        </tr>
 
+
+
+                    </table>
                     <small class="author" th:text="${article.author.fullName}"></small>
 
                     <p>
@@ -26,7 +41,7 @@
                             <a class="btn btn-default btn-xs" th:href="@{/category/{id}(id= ${article.category.id})}">back &raquo;</a>
                         </div>
                     </footer>
-                </article>
+                </div>
             </div>
         </div>
     </div>
