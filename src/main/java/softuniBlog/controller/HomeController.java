@@ -45,11 +45,14 @@ public class HomeController {
             return "redirect:/";
         }
 
+        List<Category> categories = this.categoryRepository.findAll();
+
         Category category = this.categoryRepository.findOne(id);
         Set<Article> articles = category.getArticles();
 
         model.addAttribute("articles", articles);
         model.addAttribute("category", category);
+        model.addAttribute("categories", categories);
         model.addAttribute("view", "home/list-articles");
 
         return "base-layout";

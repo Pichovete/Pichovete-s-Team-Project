@@ -78,14 +78,8 @@ Servers\Unnamed\SSL_Cert<|||>1<|||>
 Servers\Unnamed\SSL_CA<|||>1<|||>
 Servers\Unnamed\SSL_Cipher<|||>1<|||>
 Servers\Unnamed\ServerVersionFull<|||>1<|||>10.1.13-MariaDB - mariadb.org binary distribution
-<<<<<<< HEAD
-Servers\Unnamed\ConnectCount<|||>3<|||>5
+Servers\Unnamed\ConnectCount<|||>3<|||>7
 Servers\Unnamed\ServerVersion<|||>3<|||>100113
-Servers\Unnamed\LastConnect<|||>1<|||>2016-12-13 15:17:54
-=======
-Servers\Unnamed\ConnectCount<|||>3<|||>6
-Servers\Unnamed\ServerVersion<|||>3<|||>100113
-Servers\Unnamed\LastConnect<|||>1<|||>2016-12-13 15:51:49
->>>>>>> ac71457121a2b1799a5bc4e455411edec2c291e0
+Servers\Unnamed\LastConnect<|||>1<|||>2016-12-15 10:27:01
 Servers\Unnamed\lastUsedDB<|||>1<|||>java_blog
 Servers\Unnamed\java_blog|roles\Sort<|||>1<|||>0_name|

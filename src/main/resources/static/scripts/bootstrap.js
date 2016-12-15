@@ -2011,4 +2011,10 @@ if (!jQuery) { throw new Error("Bootstrap requires jQuery") }
     })
   })
 
+  /*Menu-toggle*/
+  $("#menu-toggle").click(function(e) {
+    e.preventDefault();
+    $("#wrapper").toggleClass("active");
+    alert(1);
+  });
 }(window.jQuery);

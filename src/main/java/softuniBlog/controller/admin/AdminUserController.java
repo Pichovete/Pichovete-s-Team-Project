@@ -12,11 +12,13 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import softuniBlog.bindingModel.UserEditBindingModel;
 import softuniBlog.entity.Article;
+import softuniBlog.entity.Category;
 import softuniBlog.entity.Role;
 import softuniBlog.entity.User;
 import softuniBlog.repository.ArticleRepository;
 import softuniBlog.repository.RoleRepository;
 import softuniBlog.repository.UserRepository;
+import softuniBlog.repository.CategoryRepository;
 
 import java.util.Comparator;
 import java.util.HashSet;
@@ -36,6 +38,9 @@ public class AdminUserController {
     @Autowired
     private RoleRepository roleRepository;
 
+    @Autowired
+    private CategoryRepository categoryRepository;
+
     @GetMapping("/")
     public String listUsers(Model model){
         List<User> users = this.userRepository.findAll();
@@ -44,6 +49,9 @@ public class AdminUserController {
                 .sorted(Comparator.comparing(User::getFullName))
                 .collect(Collectors.toList());
 
+        List<Category> categories = this.categoryRepository.findAll();
+
+        model.addAttribute("categories", categories);
         model.addAttribute("users", users);
         model.addAttribute("view", "admin/user/list");
 

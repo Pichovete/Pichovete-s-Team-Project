@@ -36,6 +36,7 @@ public class CategoryController {
                 .sorted(Comparator.comparing(Category::getName))
                 .collect(Collectors.toList());
 
+
         model.addAttribute("categories", categories);
                 return "base-layout";
     }

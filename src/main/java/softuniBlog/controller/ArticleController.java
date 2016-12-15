@@ -93,6 +93,9 @@ public class ArticleController {
 
         Article article = this.articleRepository.findOne(id);
 
+        List<Category> categories = this.categoryRepository.findAll();
+
+        model.addAttribute("categories", categories);
         model.addAttribute("article", article);
         model.addAttribute("view", "article/details");
 
