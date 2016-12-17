@@ -1,6 +1,11 @@
 package softuniBlog.entity;
 
+import org.springframework.web.multipart.MultipartFile;
+
 import javax.persistence.*;
+import java.io.File;
+import java.io.IOException;
+import java.io.InputStream;
 import java.util.HashSet;
 import java.util.Objects;
 import java.util.Set;
@@ -19,16 +24,21 @@ public class User {
 
     private String address;
 
+    private String picture;
+
+
+
     private Set<Role> roles;
 
     private Set<Article> articles;
 
 
-    public User(String email, String fullName, String password, String address) {
+    public User(String email, String fullName, String password, String address, String picture) {
         this.email = email;
         this.password = password;
         this.fullName = fullName;
         this.address = address;
+        this.picture = picture;
 
         this.roles = new HashSet<>();
 
@@ -104,6 +114,15 @@ public class User {
 
     public void setArticles(Set<Article> articles){
         this.articles = articles;
+    }
+
+
+    public String getPicture() {
+        return picture;
+    }
+
+    public void setPicture(String picture) {
+        this.picture = picture;
     }
 
     @Transient

@@ -12,6 +12,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 import softuniBlog.bindingModel.UserBindingModel;
 import softuniBlog.bindingModel.UserEditBindingModel;
 import softuniBlog.entity.Role;
@@ -20,6 +21,9 @@ import softuniBlog.repository.RoleRepository;
 import softuniBlog.repository.UserRepository;
 
 import javax.servlet.http.HttpServletResponse;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
@@ -48,16 +52,35 @@ public class UserController {
 
         BCryptPasswordEncoder bCryptPasswordEncoder = new BCryptPasswordEncoder();
 
+
         User user = new User(
                 userBindingModel.getEmail(),
                 userBindingModel.getFullName(),
                 bCryptPasswordEncoder.encode(userBindingModel.getPassword()),
-                userBindingModel.getAddress()
+                userBindingModel.getAddress(),
+                userBindingModel.getPicture().getOriginalFilename()
         );
 
         Role userRole = this.roleRepository.findByName("ROLE_USER");
 
         user.addRole(userRole);
+
+        MultipartFile file = userBindingModel.getPicture();
+        if (file != null){
+            String originalFileName = user.getFullName() + file.getOriginalFilename();
+            File imageFile=new File("C:\\Users\\User\\Desktop\\Team Project\\Pichovete-s-Team-Project\\src\\main\\resources\\static\\images\\", originalFileName);
+
+
+            try {
+                file.transferTo(imageFile);
+                user.setPicture(originalFileName);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+
+
+        }
+
 
         this.userRepository.saveAndFlush(user);
 

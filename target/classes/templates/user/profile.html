@@ -2,6 +2,7 @@
     <div class="container body-container">
         <div class="row">
             <div id="main" class="col-sm-9">
+                <img th:src="@{http://localhost:8080/images/{picture}(picture=${user.picture})}"/>
                 <div>
                     <p>
                         <label class="col-sm-4 control-label" >Email</label>
