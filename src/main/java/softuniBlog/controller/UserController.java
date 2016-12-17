@@ -12,11 +12,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.*;
-<<<<<<< HEAD
 import org.springframework.web.multipart.MultipartFile;
-=======
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
->>>>>>> 95f76a12287a9c8b2ea9058ccac9bd1e51a27491
 import softuniBlog.bindingModel.UserBindingModel;
 import softuniBlog.bindingModel.UserEditBindingModel;
 import softuniBlog.entity.Role;

@@ -1,14 +1,10 @@
-LastSessions<|||>1<|||>course
-LastActiveSession<|||>1<|||>course
+LastSessions<|||>1<|||>TEST
+LastActiveSession<|||>1<|||>TEST
 ColWidths_connform.ListSessions<|||>1<|||>163,50,50,50,50,50,53
 ColsVisible_connform.ListSessions<|||>1<|||>0
 ColPositions_connform.ListSessions<|||>1<|||>0,1,2,3,4,5,6
 ColSort_connform.ListSessions<|||>1<|||>0,0
-<<<<<<< HEAD
 ColWidths_frmTableEditor.listColumns<|||>1<|||>38,100,156,90,60,65,50,119,130,140,100,100
-=======
-ColWidths_frmTableEditor.listColumns<|||>1<|||>54,100,156,90,60,65,50,119,130,140,100,100
->>>>>>> 95f76a12287a9c8b2ea9058ccac9bd1e51a27491
 ColsVisible_frmTableEditor.listColumns<|||>1<|||>0,1,2,3,4,5,6,7,8,9,10,11
 ColPositions_frmTableEditor.listColumns<|||>1<|||>0,1,2,3,4,5,6,7,8,9,10,11
 ColSort_frmTableEditor.listColumns<|||>1<|||>-1,0
@@ -51,12 +47,8 @@ ColWidths_MainForm.ListTables<|||>1<|||>120,70,70,120,120,70,100,50,70,70,70,70,
 ColsVisible_MainForm.ListTables<|||>1<|||>0,1,2,3,4,5,6,18
 ColPositions_MainForm.ListTables<|||>1<|||>0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18
 ColSort_MainForm.ListTables<|||>1<|||>0,0
-<<<<<<< HEAD
-MainWinLeft<|||>3<|||>-130
+MainWinLeft<|||>3<|||>0
 MainWinTop<|||>3<|||>104
-=======
-MainWinLeft<|||>3<|||>115
-MainWinTop<|||>3<|||>109
 Servers\course\SessionCreated<|||>1<|||>2016-12-17 19:29:28
 Servers\course\Host<|||>1<|||>127.0.0.1
 Servers\course\WindowsAuth<|||>3<|||>0
@@ -91,7 +83,39 @@ Servers\course\ServerVersion<|||>3<|||>100113
 Servers\course\LastConnect<|||>1<|||>2016-12-17 19:31:18
 Servers\course\lastUsedDB<|||>1<|||>java_blog
 Servers\course\java_blog|articles\Sort<|||>1<|||>0_title|
->>>>>>> 95f76a12287a9c8b2ea9058ccac9bd1e51a27491
+Servers\TEST\SessionCreated<|||>1<|||>2016-12-17 21:08:23
+Servers\TEST\Host<|||>1<|||>127.0.0.1
+Servers\TEST\WindowsAuth<|||>3<|||>0
+Servers\TEST\User<|||>1<|||>root
+Servers\TEST\Password<|||>1<|||>9
+Servers\TEST\LoginPrompt<|||>3<|||>0
+Servers\TEST\Port<|||>1<|||>3306
+Servers\TEST\NetType<|||>3<|||>0
+Servers\TEST\Compressed<|||>3<|||>0
+Servers\TEST\LocalTimeZone<|||>3<|||>0
+Servers\TEST\QueryTimeout<|||>3<|||>0
+Servers\TEST\KeepAlive<|||>3<|||>0
+Servers\TEST\FullTableStatus<|||>3<|||>1
+Servers\TEST\Databases<|||>1<|||>
+Servers\TEST\Comment<|||>1<|||>
+Servers\TEST\StartupScriptFilename<|||>1<|||>
+Servers\TEST\SSHtunnelHost<|||>1<|||>
+Servers\TEST\SSHtunnelHostPort<|||>3<|||>0
+Servers\TEST\SSHtunnelUser<|||>1<|||>
+Servers\TEST\SSHtunnelPassword<|||>1<|||>1
+Servers\TEST\SSHtunnelTimeout<|||>3<|||>4
+Servers\TEST\SSHtunnelPrivateKey<|||>1<|||>
+Servers\TEST\SSHtunnelPort<|||>3<|||>3307
+Servers\TEST\SSL_Active<|||>3<|||>0
+Servers\TEST\SSL_Key<|||>1<|||>
+Servers\TEST\SSL_Cert<|||>1<|||>
+Servers\TEST\SSL_CA<|||>1<|||>
+Servers\TEST\SSL_Cipher<|||>1<|||>
+Servers\TEST\ServerVersionFull<|||>1<|||>10.1.13-MariaDB - mariadb.org binary distribution
+Servers\TEST\ConnectCount<|||>3<|||>1
+Servers\TEST\ServerVersion<|||>3<|||>100113
+Servers\TEST\LastConnect<|||>1<|||>2016-12-17 21:08:28
+Servers\TEST\lastUsedDB<|||>1<|||>
 Servers\Unnamed\SessionCreated<|||>1<|||>2016-12-15 16:06:22
 Servers\Unnamed\Host<|||>1<|||>127.0.0.1
 Servers\Unnamed\WindowsAuth<|||>3<|||>0
