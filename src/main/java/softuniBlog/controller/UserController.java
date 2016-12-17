@@ -12,6 +12,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import softuniBlog.bindingModel.UserBindingModel;
 import softuniBlog.bindingModel.UserEditBindingModel;
 import softuniBlog.entity.Role;
@@ -40,11 +41,23 @@ public class UserController {
     }
 
     @PostMapping("/register")
-    public String registerProcess(UserBindingModel userBindingModel){
+    public String registerProcess(UserBindingModel userBindingModel, RedirectAttributes redirectAttributes, User userForReg){
 
-        if(!userBindingModel.getPassword().equals(userBindingModel.getConfirmPassword())){
+        if (!userBindingModel.getPassword().equals(userBindingModel.getConfirmPassword())) {
+            redirectAttributes.addFlashAttribute("errors", "Passwords do not match");
+
             return "redirect:/register";
         }
+        if (userBindingModel.getPassword().length() < 8){
+            redirectAttributes.addFlashAttribute("errors", "Password length must be at least 8 characters");
+
+            return "redirect:/register";
+        }
+        //if (userForReg.getEmail().equals(userBindingModel.getEmail())){
+        //    redirectAttributes.addFlashAttribute("errors", "User with the same email already exist.");
+
+        //    return "redirect:/register";
+        //}
 
         BCryptPasswordEncoder bCryptPasswordEncoder = new BCryptPasswordEncoder();
 

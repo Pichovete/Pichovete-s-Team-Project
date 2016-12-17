@@ -9,37 +9,72 @@
                     <table>
                         <tr>
                             <td>
-                                <iframe width="560" height="315" th:src="@{https://www.youtube.com/embed/{url} (url=${article.content})}" frameborder="1" allowfullscreen="1"></iframe>
+                                <iframe width="560" height="315"
+                                        th:src="@{https://www.youtube.com/embed/{url} (url=${article.content})}"
+                                        frameborder="1" allowfullscreen="1"></iframe>
                             </td>
                             <td align="top" width="400">
                                 <div class="panel panel-default">
                                     <div class="panel-body">
-                                        <p th:text="${article.description}"> </p>
+                                        <p th:text="${article.description}"></p>
                                     </div>
                                 </div>
 
                             </td>
                         </tr>
-
-
-
                     </table>
                     <small class="author" th:text="${article.author.fullName}"></small>
 
                     <p>
-                        <a class="btn btn-default btn-xs" th:each="tag:${article.tags}" th:href="@{/tag/{name}(name=${tag.name})}" th:text="${tag.name}"></a>
+                        <a class="btn btn-default btn-xs" th:each="tag:${article.tags}"
+                           th:href="@{/tag/{name}(name=${tag.name})}" th:text="${tag.name}"></a>
                     </p>
 
 
                     <footer>
 
                         <div class="pull-right">
-                            <th:block sec:authorize="isAuthenticated()" th:if="${user.isAdmin() OR user.isAuthor(article)}">
-                            <a class="btn btn-success btn-xs" th:href="@{/article/edit/{id}(id = ${article.id})}">Edit</a>
-                            <a class="btn btn-danger btn-xs" th:href="@{/article/delete/{id}(id = ${article.id})}">Delete</a>
+                            <th:block sec:authorize="isAuthenticated()"
+                                      th:if="${user.isAdmin() OR user.isAuthor(article)}">
+                                <a class="btn btn-success btn-xs" th:href="@{/article/edit/{id}(id = ${article.id})}">Edit</a>
+                                <a class="btn btn-danger btn-xs" th:href="@{/article/delete/{id}(id = ${article.id})}">Delete</a>
                             </th:block>
+                            <th:block sec:authorize="isAuthenticated()">
+                                <a class="btn btn-primary btn-xs" type="button" data-toggle="modal"
+                                   data-target="#myModal">Comment</a>
+                            </th:block>
+                            <div id="myModal" class="modal fade" role="dialog">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal"
+                                                    aria-hidden="true">&times;</button>
+                                            <h4 class="modal-title">Comment</h4>
+                                        </div>
+                                        <div class="modal-body form-group">
+                                            <div class="col-lg-10">
+                                                <textarea class="form-control" rows="3" id="textArea"></textarea>
+                                            </div>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-primary">Submit</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                             <a class="btn btn-default btn-xs" th:href="@{/category/{id}(id= ${article.category.id})}">back &raquo;</a>
                         </div>
+                        <br>
+                        <h3><p class="text-success">Comments:</p></h3>
+                        <div class="bottom-right">
+                            <p>
+                                <blockquote class="blockquote-reverse">
+                            <p><h4>The comment is placed here!</h4></p>
+                            <small><cite title="Source Title">Comment author</cite></small>
+                            </blockquote>
+                            </p>
+                        </div>
+                        </br>
                     </footer>
                 </div>
             </div>

@@ -1,10 +1,10 @@
-LastSessions<|||>1<|||>Unnamed
-LastActiveSession<|||>1<|||>Unnamed
+LastSessions<|||>1<|||>course
+LastActiveSession<|||>1<|||>course
 ColWidths_connform.ListSessions<|||>1<|||>163,50,50,50,50,50,53
 ColsVisible_connform.ListSessions<|||>1<|||>0
 ColPositions_connform.ListSessions<|||>1<|||>0,1,2,3,4,5,6
 ColSort_connform.ListSessions<|||>1<|||>0,0
-ColWidths_frmTableEditor.listColumns<|||>1<|||>70,100,156,90,60,65,50,119,130,140,100,100
+ColWidths_frmTableEditor.listColumns<|||>1<|||>54,100,156,90,60,65,50,119,130,140,100,100
 ColsVisible_frmTableEditor.listColumns<|||>1<|||>0,1,2,3,4,5,6,7,8,9,10,11
 ColPositions_frmTableEditor.listColumns<|||>1<|||>0,1,2,3,4,5,6,7,8,9,10,11
 ColSort_frmTableEditor.listColumns<|||>1<|||>-1,0
@@ -49,6 +49,40 @@ ColPositions_MainForm.ListTables<|||>1<|||>0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15
 ColSort_MainForm.ListTables<|||>1<|||>0,0
 MainWinLeft<|||>3<|||>115
 MainWinTop<|||>3<|||>109
+Servers\course\SessionCreated<|||>1<|||>2016-12-17 19:29:28
+Servers\course\Host<|||>1<|||>127.0.0.1
+Servers\course\WindowsAuth<|||>3<|||>0
+Servers\course\User<|||>1<|||>root
+Servers\course\Password<|||>1<|||>1
+Servers\course\LoginPrompt<|||>3<|||>0
+Servers\course\Port<|||>1<|||>3306
+Servers\course\NetType<|||>3<|||>0
+Servers\course\Compressed<|||>3<|||>0
+Servers\course\LocalTimeZone<|||>3<|||>0
+Servers\course\QueryTimeout<|||>3<|||>0
+Servers\course\KeepAlive<|||>3<|||>0
+Servers\course\FullTableStatus<|||>3<|||>1
+Servers\course\Databases<|||>1<|||>
+Servers\course\Comment<|||>1<|||>
+Servers\course\StartupScriptFilename<|||>1<|||>
+Servers\course\SSHtunnelHost<|||>1<|||>
+Servers\course\SSHtunnelHostPort<|||>3<|||>0
+Servers\course\SSHtunnelUser<|||>1<|||>
+Servers\course\SSHtunnelPassword<|||>1<|||>6
+Servers\course\SSHtunnelTimeout<|||>3<|||>4
+Servers\course\SSHtunnelPrivateKey<|||>1<|||>
+Servers\course\SSHtunnelPort<|||>3<|||>3307
+Servers\course\SSL_Active<|||>3<|||>0
+Servers\course\SSL_Key<|||>1<|||>
+Servers\course\SSL_Cert<|||>1<|||>
+Servers\course\SSL_CA<|||>1<|||>
+Servers\course\SSL_Cipher<|||>1<|||>
+Servers\course\ServerVersionFull<|||>1<|||>10.1.13-MariaDB - mariadb.org binary distribution
+Servers\course\ConnectCount<|||>3<|||>1
+Servers\course\ServerVersion<|||>3<|||>100113
+Servers\course\LastConnect<|||>1<|||>2016-12-17 19:31:18
+Servers\course\lastUsedDB<|||>1<|||>java_blog
+Servers\course\java_blog|articles\Sort<|||>1<|||>0_title|
 Servers\Unnamed\SessionCreated<|||>1<|||>2016-12-15 16:06:22
 Servers\Unnamed\Host<|||>1<|||>127.0.0.1
 Servers\Unnamed\WindowsAuth<|||>3<|||>0
