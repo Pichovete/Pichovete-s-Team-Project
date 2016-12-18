@@ -52,11 +52,11 @@ public class UserController {
 
             return "redirect:/register";
         }
-      //if (userBindingModel.getPassword().length() < 8){
-      //    redirectAttributes.addFlashAttribute("errors", "Password length must be at least 8 characters");
+        if (userBindingModel.getPassword().length() < 8){
+            redirectAttributes.addFlashAttribute("errors", "Password length must be at least 8 characters");
 
-      //    return "redirect:/register";
-      //}
+            return "redirect:/register";
+        }
         //if (userForReg.getEmail().equals(userBindingModel.getEmail())){
         //    redirectAttributes.addFlashAttribute("errors", "User with the same email already exist.");
 
