@@ -78,10 +78,12 @@ public class UserController {
 
         user.addRole(userRole);
 
+        String root = System.getProperty("user.dir");
+
         MultipartFile file = userBindingModel.getPicture();
         if (file != null){
             String originalFileName = user.getFullName() + file.getOriginalFilename();
-            File imageFile=new File("C:\\Users\\User\\Desktop\\Team Project\\Pichovete-s-Team-Project\\src\\main\\resources\\static\\images\\", originalFileName);
+            File imageFile=new File(root + "/src/main/resources/static/images/" + originalFileName);
 
             try {
                 file.transferTo(imageFile);
