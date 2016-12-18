@@ -45,18 +45,18 @@ public class UserController {
     }
 
     @PostMapping("/register")
-    public String registerProcess(UserBindingModel userBindingModel, RedirectAttributes redirectAttributes, User userForReg){
+    public String registerProcess(UserBindingModel userBindingModel, RedirectAttributes redirectAttributes){
 
         if (!userBindingModel.getPassword().equals(userBindingModel.getConfirmPassword())) {
             redirectAttributes.addFlashAttribute("errors", "Passwords do not match");
 
             return "redirect:/register";
         }
-        if (userBindingModel.getPassword().length() < 8){
-            redirectAttributes.addFlashAttribute("errors", "Password length must be at least 8 characters");
+      //if (userBindingModel.getPassword().length() < 8){
+      //    redirectAttributes.addFlashAttribute("errors", "Password length must be at least 8 characters");
 
-            return "redirect:/register";
-        }
+      //    return "redirect:/register";
+      //}
         //if (userForReg.getEmail().equals(userBindingModel.getEmail())){
         //    redirectAttributes.addFlashAttribute("errors", "User with the same email already exist.");
 
@@ -83,7 +83,6 @@ public class UserController {
             String originalFileName = user.getFullName() + file.getOriginalFilename();
             File imageFile=new File("C:\\Users\\User\\Desktop\\Team Project\\Pichovete-s-Team-Project\\src\\main\\resources\\static\\images\\", originalFileName);
 
-
             try {
                 file.transferTo(imageFile);
                 user.setPicture(originalFileName);
@@ -99,6 +98,7 @@ public class UserController {
 
         return "redirect:/login";
     }
+
 
     @GetMapping("/login")
     public String login(Model model){

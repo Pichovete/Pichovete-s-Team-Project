@@ -117,6 +117,7 @@ public class User {
     }
 
 
+    @Column(name = "picture")
     public String getPicture() {
         return picture;
     }
@@ -124,6 +125,9 @@ public class User {
     public void setPicture(String picture) {
         this.picture = picture;
     }
+
+
+
 
     @Transient
     public boolean isAdmin(){
