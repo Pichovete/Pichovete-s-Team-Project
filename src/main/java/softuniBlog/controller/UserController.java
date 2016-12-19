@@ -38,6 +38,8 @@ public class UserController {
     RoleRepository roleRepository;
     @Autowired
     UserRepository userRepository;
+    @Autowired
+    CategoryRepository categoryRepository;
 
     @Autowired
     CategoryRepository categoryRepository;
@@ -90,7 +92,7 @@ public class UserController {
         MultipartFile file = userBindingModel.getPicture();
         if (file != null){
             String originalFileName = user.getFullName() + file.getOriginalFilename();
-            File imageFile=new File("C:\\Users\\User\\Desktop\\Team Project\\Pichovete-s-Team-Project\\src\\main\\resources\\static\\images\\", originalFileName);
+            File imageFile=new File(root + "\\src\\main\\resources\\static\\images\\", originalFileName);
 
             try {
                 multipartFile.transferTo(imageFile);
@@ -139,6 +141,9 @@ public class UserController {
 
         User user = this.userRepository.findByEmail(principal.getUsername());
 
+        List<Category> categories = categoryRepository.findAll();
+
+        model.addAttribute("categories", categories);
         model.addAttribute("user", user);
         model.addAttribute("view", "user/profile");
 
@@ -148,6 +153,7 @@ public class UserController {
     @GetMapping("/user/edit/{id}")
     @PreAuthorize("isAuthenticated()")
     public String edit(@PathVariable Integer id, Model model){
+
 
 
         User user = this.userRepository.findOne(id);

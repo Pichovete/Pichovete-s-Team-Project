@@ -2,23 +2,26 @@
     <div class="container body-container">
         <div class="row">
             <div id="main" class="col-sm-9">
-                <img th:src="@{http://localhost:8080/images/{picture}(picture=${user.picture})}"/>
-                <div>
-                    <p>
-                        <label class="col-sm-4 control-label" >Email</label>
-                        <span th:text="${user.email}"></span>
-                    </p>
-                    <p>
-                        <label class="col-sm-4 control-label" >Name</label>
+                <table >
+                    <td><img th:src="@{/images/{picture}(picture=${user.picture})}" width="100" height="100"/></td>
+                    <td width="300">
+                        <p>
+                            <label class="col-sm-4 control-label" >Email:</label>
+                            <span th:text="${user.email}"></span>
+                        </p>
+                        <p>
+                            <label class="col-sm-4 control-label" >Name:</label>
 
-                        <span th:text="${user.fullName}"></span>
-                    </p>
-                    <p>
-                        <label class="col-sm-4 control-label" >Address</label>
+                            <span th:text="${user.fullName}"></span>
+                        </p>
+                        <p>
+                            <label class="col-sm-4 control-label" >Address:</label>
 
-                        <span th:text="${user.address}"></span>
-                    </p>
-                </div>
+                            <span th:text="${user.address}"></span>
+                        </p>
+                    </td>
+                </table>
+
             </div>
         </div>
     </div>
