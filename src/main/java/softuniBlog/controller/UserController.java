@@ -16,8 +16,10 @@ import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import softuniBlog.bindingModel.UserBindingModel;
 import softuniBlog.bindingModel.UserEditBindingModel;
+import softuniBlog.entity.Category;
 import softuniBlog.entity.Role;
 import softuniBlog.entity.User;
+import softuniBlog.repository.CategoryRepository;
 import softuniBlog.repository.RoleRepository;
 import softuniBlog.repository.UserRepository;
 
@@ -37,8 +39,13 @@ public class UserController {
     @Autowired
     UserRepository userRepository;
 
+    @Autowired
+    CategoryRepository categoryRepository;
     @GetMapping("/register")
     public String register(Model model) {
+        List<Category> categories = this.categoryRepository.findAll();
+        model.addAttribute("categories", categories);
+
         model.addAttribute("view", "user/register");
 
         return "base-layout";
@@ -104,6 +111,9 @@ public class UserController {
 
     @GetMapping("/login")
     public String login(Model model){
+        List<Category> categories = this.categoryRepository.findAll();
+        model.addAttribute("categories", categories);
+
         model.addAttribute("view", "user/login");
 
         return "base-layout";
