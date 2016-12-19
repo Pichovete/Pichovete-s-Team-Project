@@ -41,8 +41,6 @@ public class UserController {
     @Autowired
     CategoryRepository categoryRepository;
 
-    @Autowired
-    CategoryRepository categoryRepository;
     @GetMapping("/register")
     public String register(Model model) {
         List<Category> categories = this.categoryRepository.findAll();
