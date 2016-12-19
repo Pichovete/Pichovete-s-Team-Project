@@ -78,9 +78,9 @@ Servers\course\SSL_Cert<|||>1<|||>
 Servers\course\SSL_CA<|||>1<|||>
 Servers\course\SSL_Cipher<|||>1<|||>
 Servers\course\ServerVersionFull<|||>1<|||>10.1.13-MariaDB - mariadb.org binary distribution
-Servers\course\ConnectCount<|||>3<|||>5
+Servers\course\ConnectCount<|||>3<|||>6
 Servers\course\ServerVersion<|||>3<|||>100113
-Servers\course\LastConnect<|||>1<|||>2016-12-19 14:43:21
+Servers\course\LastConnect<|||>1<|||>2016-12-19 15:08:43
 Servers\course\lastUsedDB<|||>1<|||>java_blog
 Servers\course\java_blog|articles\Sort<|||>1<|||>0_title|
 Servers\Unnamed\SessionCreated<|||>1<|||>2016-12-15 16:06:22
