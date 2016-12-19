@@ -4,7 +4,6 @@
     <list default="true" id="01280e64-728d-486d-91cd-0965244b73a0" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mysql/data/ib_logfile0" afterPath="$PROJECT_DIR$/mysql/data/ib_logfile0" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mysql/data/ibdata1" afterPath="$PROJECT_DIR$/mysql/data/ibdata1" />
-<<<<<<< HEAD
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mysql/data/java_blog/articles.ibd" afterPath="$PROJECT_DIR$/mysql/data/java_blog/articles.ibd" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mysql/data/java_blog/articles_tags.ibd" afterPath="$PROJECT_DIR$/mysql/data/java_blog/articles_tags.ibd" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mysql/data/java_blog/tags.ibd" afterPath="$PROJECT_DIR$/mysql/data/java_blog/tags.ibd" />
@@ -28,7 +27,6 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/templates/article/edit.html" afterPath="$PROJECT_DIR$/target/classes/templates/article/edit.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/templates/fragments/head.html" afterPath="$PROJECT_DIR$/target/classes/templates/fragments/head.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/templates/home/index.html" afterPath="$PROJECT_DIR$/target/classes/templates/home/index.html" />
-=======
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mysql/data/java_blog/users.ibd" afterPath="$PROJECT_DIR$/mysql/data/java_blog/users.ibd" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mysql/data/java_blog/users_roles.ibd" afterPath="$PROJECT_DIR$/mysql/data/java_blog/users_roles.ibd" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/softuniBlog/controller/UserController.class" afterPath="$PROJECT_DIR$/target/classes/softuniBlog/controller/UserController.class" />
@@ -39,7 +37,7 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/softuniBlog/controller/UserController.java" afterPath="$PROJECT_DIR$/src/main/java/softuniBlog/controller/UserController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/templates/fragments/header.html" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/header.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/templates/user/profile.html" afterPath="$PROJECT_DIR$/src/main/resources/templates/user/profile.html" />
->>>>>>> e4740e41117136ec9e6169554945015bd840f0c9
+
     </list>
     <ignored path="Blog.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -61,21 +59,19 @@
     <favorites_list name="Blog" />
   </component>
   <component name="FileEditorManager">
-<<<<<<< HEAD
+
     <leaf>
       <file leaf-file-name="details.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/templates/article/details.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="166">
               <caret line="32" column="77" lean-forward="false" selection-start-line="32" selection-start-column="77" selection-end-line="32" selection-end-column="77" />
-=======
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
       <file leaf-file-name="header.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/templates/fragments/header.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="968">
               <caret line="50" column="25" selection-start-line="50" selection-start-column="25" selection-end-line="50" selection-end-column="25" />
->>>>>>> e4740e41117136ec9e6169554945015bd840f0c9
               <folding>
                 <element signature="n#style#0;n#td#1;n#tr#0;n#table#0;n#div#0;n#div#0;n#div#0;n#div#0;n#main#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#h3#0;n#div#0;n#div#0;n#td#2;n#tr#0;n#table#0;n#div#0;n#div#0;n#div#0;n#div#0;n#main#0;n#!!top" expanded="true" />
@@ -84,14 +80,12 @@
           </provider>
         </entry>
       </file>
-<<<<<<< HEAD
       <file leaf-file-name="edit.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/templates/article/edit.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="17">
               <caret line="17" column="114" lean-forward="false" selection-start-line="17" selection-start-column="114" selection-end-line="17" selection-end-column="114" />
-=======
-      <file leaf-file-name="UserController.java" pinned="false" current-in-tab="true">
+     <file leaf-file-name="UserController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/softuniBlog/controller/UserController.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-1254">
@@ -106,31 +100,26 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-110">
               <caret line="13" column="44" selection-start-line="13" selection-start-column="44" selection-end-line="13" selection-end-column="44" />
->>>>>>> e4740e41117136ec9e6169554945015bd840f0c9
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-<<<<<<< HEAD
       <file leaf-file-name="ArticleController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/softuniBlog/controller/ArticleController.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="267">
               <caret line="148" column="72" lean-forward="false" selection-start-line="148" selection-start-column="72" selection-end-line="148" selection-end-column="72" />
-=======
       <file leaf-file-name="HomeController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/softuniBlog/controller/HomeController.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="286">
               <caret line="28" column="70" selection-start-line="28" selection-start-column="8" selection-end-line="28" selection-end-column="70" />
->>>>>>> e4740e41117136ec9e6169554945015bd840f0c9
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-<<<<<<< HEAD
       <file leaf-file-name="ArticleBindingModel.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/softuniBlog/bindingModel/ArticleBindingModel.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -142,37 +131,31 @@
                 <element signature="e#706#707#0" expanded="true" />
                 <element signature="e#744#745#0" expanded="true" />
               </folding>
-=======
       <file leaf-file-name="profile.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/templates/user/profile.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="107">
               <caret line="6" column="34" selection-start-line="6" selection-start-column="34" selection-end-line="6" selection-end-column="34" />
               <folding />
->>>>>>> e4740e41117136ec9e6169554945015bd840f0c9
             </state>
           </provider>
         </entry>
       </file>
-<<<<<<< HEAD
       <file leaf-file-name="UserController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/softuniBlog/controller/UserController.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="323">
               <caret line="48" column="52" lean-forward="false" selection-start-line="48" selection-start-column="52" selection-end-line="48" selection-end-column="52" />
-=======
       <file leaf-file-name="head.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/templates/fragments/head.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
->>>>>>> e4740e41117136ec9e6169554945015bd840f0c9
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-<<<<<<< HEAD
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/templates/home/index.html">
           <provider selected="true" editor-type-id="text-editor">
@@ -181,31 +164,26 @@
               <folding>
                 <element signature="e#948#955#0" expanded="true" />
               </folding>
-=======
       <file leaf-file-name="list.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/templates/admin/user/list.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="198">
               <caret line="21" column="17" selection-start-line="21" selection-start-column="17" selection-end-line="21" selection-end-column="17" />
               <folding />
->>>>>>> e4740e41117136ec9e6169554945015bd840f0c9
             </state>
           </provider>
         </entry>
       </file>
-<<<<<<< HEAD
       <file leaf-file-name="list-articles.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/templates/home/list-articles.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="17">
               <caret line="1" column="40" lean-forward="true" selection-start-line="1" selection-start-column="40" selection-end-line="2" selection-end-column="76" />
-=======
       <file leaf-file-name="list.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/templates/admin/category/list.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="154">
               <caret line="7" column="64" selection-start-line="7" selection-start-column="16" selection-end-line="7" selection-end-column="64" />
->>>>>>> e4740e41117136ec9e6169554945015bd840f0c9
               <folding />
             </state>
           </provider>
@@ -258,11 +236,8 @@
         <option value="$PROJECT_DIR$/src/main/resources/static/scripts/bootstrap.js" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/fragments/sidebar.html" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/base-layout.html" />
-<<<<<<< HEAD
         <option value="$PROJECT_DIR$/src/main/java/softuniBlog/controller/HomeController.java" />
-=======
         <option value="$PROJECT_DIR$/src/main/resources/templates/home/index.html" />
->>>>>>> e4740e41117136ec9e6169554945015bd840f0c9
         <option value="$PROJECT_DIR$/src/main/java/softuniBlog/controller/admin/AdminUserController.java" />
         <option value="$PROJECT_DIR$/src/main/java/softuniBlog/controller/admin/CategoryController.java" />
         <option value="$PROJECT_DIR$/src/main/java/softuniBlog/entity/Article.java" />
@@ -276,7 +251,6 @@
         <option value="$PROJECT_DIR$/src/main/java/softuniBlog/entity/User.java" />
         <option value="$PROJECT_DIR$/src/main/resources/static/css/style.css" />
         <option value="$PROJECT_DIR$/src/main/java/softuniBlog/BlogApplication.java" />
-<<<<<<< HEAD
         <option value="$PROJECT_DIR$/src/main/resources/templates/user/profile.html" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/article/details.html" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/article/delete.html" />
@@ -289,13 +263,11 @@
         <option value="$PROJECT_DIR$/src/main/resources/templates/home/list-articles.html" />
         <option value="$PROJECT_DIR$/src/main/java/softuniBlog/controller/UserController.java" />
         <option value="$PROJECT_DIR$/src/main/java/softuniBlog/controller/UserController.java" />
-=======
         <option value="$PROJECT_DIR$/src/main/java/softuniBlog/controller/UserController.java" />
         <option value="$PROJECT_DIR$/src/main/java/softuniBlog/controller/UserController.java" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/fragments/header.html" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/user/profile.html" />
         <option value="$PROJECT_DIR$/src/main/java/softuniBlog/controller/HomeController.java" />
->>>>>>> e4740e41117136ec9e6169554945015bd840f0c9
       </list>
     </option>
   </component>
@@ -490,7 +462,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-<<<<<<< HEAD
               <option name="myItemId" value="home" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -521,8 +492,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-=======
->>>>>>> e4740e41117136ec9e6169554945015bd840f0c9
               <option name="myItemId" value="fragments" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -553,7 +522,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-<<<<<<< HEAD
               <option name="myItemId" value="article" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -584,8 +552,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-=======
->>>>>>> e4740e41117136ec9e6169554945015bd840f0c9
               <option name="myItemId" value="admin" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -736,7 +702,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-<<<<<<< HEAD
               <option name="myItemId" value="entity" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -767,8 +732,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-=======
->>>>>>> e4740e41117136ec9e6169554945015bd840f0c9
               <option name="myItemId" value="controller" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -1252,21 +1215,15 @@
       <workItem from="1482090058462" duration="115000" />
       <workItem from="1482151480460" duration="1337000" />
       <workItem from="1482153003810" duration="2164000" />
-<<<<<<< HEAD
       <workItem from="1482155501529" duration="7002000" />
-=======
       <workItem from="1482155501529" duration="264000" />
       <workItem from="1482159028946" duration="2997000" />
->>>>>>> e4740e41117136ec9e6169554945015bd840f0c9
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-<<<<<<< HEAD
     <option name="totallyTimeSpent" value="139089000" />
-=======
     <option name="totallyTimeSpent" value="135348000" />
->>>>>>> e4740e41117136ec9e6169554945015bd840f0c9
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1278,11 +1235,8 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-<<<<<<< HEAD
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-=======
     <frame x="-9" y="-9" width="1938" height="1060" extended-state="7" />
->>>>>>> e4740e41117136ec9e6169554945015bd840f0c9
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1303,7 +1257,7 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-<<<<<<< HEAD
+
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980973" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3273743" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -1316,8 +1270,7 @@
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21522693" sideWeight="0.49577168" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-=======
->>>>>>> e4740e41117136ec9e6169554945015bd840f0c9
+
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.14010416" sideWeight="0.50422835" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1491,10 +1444,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/fragments/header.html">
       <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
         <state relative-caret-position="100">
           <caret line="17" column="26" lean-forward="true" selection-start-line="17" selection-start-column="26" selection-end-line="17" selection-end-column="26" />
-=======
+
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
@@ -1553,14 +1505,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="968">
           <caret line="50" column="25" selection-start-line="50" selection-start-column="25" selection-end-line="50" selection-end-column="25" />
->>>>>>> e4740e41117136ec9e6169554945015bd840f0c9
           <folding>
             <element signature="n#style#0;n#img#0;n#a#0;n#div#0;n#div#0;n#div#0;n#header#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/main/java/softuniBlog/controller/ArticleController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="267">
@@ -1581,25 +1531,22 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="1" column="40" lean-forward="true" selection-start-line="1" selection-start-column="40" selection-end-line="2" selection-end-column="76" />
-=======
+
     <entry file="file://$PROJECT_DIR$/src/main/java/softuniBlog/controller/HomeController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="286">
           <caret line="28" column="70" selection-start-line="28" selection-start-column="8" selection-end-line="28" selection-end-column="70" />
->>>>>>> e4740e41117136ec9e6169554945015bd840f0c9
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/softuniBlog/controller/UserController.java">
       <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
         <state relative-caret-position="323">
           <caret line="48" column="52" lean-forward="false" selection-start-line="48" selection-start-column="52" selection-end-line="48" selection-end-column="52" />
-=======
+
         <state relative-caret-position="-1254">
           <caret line="89" column="44" selection-start-line="89" selection-start-column="44" selection-end-line="89" selection-end-column="44" />
->>>>>>> e4740e41117136ec9e6169554945015bd840f0c9
           <folding />
         </state>
       </provider>
