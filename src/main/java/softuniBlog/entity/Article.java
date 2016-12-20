@@ -20,13 +20,20 @@ public class Article {
 
     private Set<Tag> tags;
 
-    public Article(String title, String content,String description, User author, Category category, HashSet<Tag> tags) {
+    private Integer articleLikes;
+
+    private String likedUsers;
+
+    public Article(String title, String content,String description, User author, Category category, HashSet<Tag> tags, Integer articleLikes, String likedUsers) {
         this.title = title;
         this.content = content;
         this.description=description;
         this.author = author;
         this.category = category;
         this.tags = tags;
+        this.articleLikes = articleLikes;
+        this.likedUsers = likedUsers;
+
     }
 
     public Article() {
@@ -102,5 +109,28 @@ public class Article {
 
     public void setTags(Set<Tag> tags) {
         this.tags = tags;
+    }
+
+    @Column(name = "articleLikes")
+    public Integer getArticleLikes() {
+        return articleLikes;
+    }
+
+    public void setArticleLikes(Integer articleLikes) {
+        this.articleLikes = articleLikes;
+    }
+
+    @Column(name = "likedUsers")
+    public String getLikedUsers() {
+        return likedUsers;
+    }
+
+    public void setLikedUsers(String likedUsers) {
+        this.likedUsers = likedUsers;
+    }
+
+    @Transient
+    public Integer likeCount(Set<String> likes){
+        return likes.size();
     }
 }

@@ -15,6 +15,7 @@ public class ArticleBindingModel {
 
     private String tagString;
 
+
     public Integer getCategoryId() {
         return categoryId;
     }

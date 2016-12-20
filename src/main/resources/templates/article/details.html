@@ -38,7 +38,7 @@
                     </p>
 
                     <p>
-                        <a  class="btn btn-success btn-xs" th:href="@{/}">Like<span></span></a>
+                        <a  class="btn btn-success btn-xs" th:href="@{/article/{id}/like(id=${article.id})}" >Like<span th:text="${article.articleLikes}"></span></a>
                     </p>
 
 

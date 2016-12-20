@@ -26,11 +26,11 @@ public class User {
 
     private String picture;
 
-
-
     private Set<Role> roles;
 
     private Set<Article> articles;
+
+    private Set<Article> likedArticles;
 
 
     public User(String email, String fullName, String password, String address, String picture) {
@@ -127,13 +127,25 @@ public class User {
     }
 
 
+    @ManyToMany
+    public Set<Article> getLikedArticles() {
+        return likedArticles;
+    }
 
+    public void setLikedArticles(Set<Article> likedArticles) {
+        this.likedArticles = likedArticles;
+    }
 
     @Transient
     public boolean isAdmin(){
         return this.getRoles()
                 .stream()
                 .anyMatch(role -> role.getName().equals("ROLE_ADMIN"));
+    }
+
+    @Transient
+    public  boolean isLiked(Set<String> likedUsers){
+        return likedUsers.contains(this.getId().toString());
     }
 
     @Transient

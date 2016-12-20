@@ -20,8 +20,10 @@ import softuniBlog.repository.CategoryRepository;
 import softuniBlog.repository.TagRepository;
 import softuniBlog.repository.UserRepository;
 
+import java.util.Arrays;
 import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 import java.util.stream.Collectors;
 
 @Controller
@@ -62,13 +64,19 @@ public class ArticleController {
 
         HashSet<Tag> tags = this.findTagsFromString(articleBindingModel.getTagString());
 
+        Integer articleLikes = 0;
+
+        String likedUsers = "";
+
         Article articleEntity = new Article(
                 articleBindingModel.getTitle(),
-                articleBindingModel.getContent(),
+                articleBindingModel.getContent().substring(32),
                 articleBindingModel.getDescription(),
                 userEntity,
                 category,
-                tags
+                tags,
+                articleLikes,
+                likedUsers
         );
 
         this.articleRepository.saveAndFlush(articleEntity);
@@ -146,7 +154,7 @@ public class ArticleController {
 
         HashSet<Tag> tags = this.findTagsFromString(articleBindingModel.getTagString());
 
-        article.setContent(articleBindingModel.getContent().substring(32));
+        article.setContent(articleBindingModel.getContent());
         article.setDescription(articleBindingModel.getDescription());
         article.setTitle(articleBindingModel.getTitle());
         article.setCategory(category);
@@ -220,6 +228,37 @@ public class ArticleController {
         }
 
         return tags;
+    }
+
+    @GetMapping("/article/{id}/like")
+    @PreAuthorize("isAuthenticated()")
+    public String likeProccess(@PathVariable Integer id){
+
+        UserDetails principal = (UserDetails) SecurityContextHolder.getContext()
+                .getAuthentication()
+                .getPrincipal();
+
+        User user = this.userRepository.findByEmail(principal.getUsername());
+
+        Article article = this.articleRepository.findOne(id);
+
+        Set<String> likes = new HashSet<String>(Arrays.asList(article.getLikedUsers().split(",")));
+
+        if(user.isLiked(likes)){
+            return "redirect:/article/" + article.getId();
+        }
+
+        String likedUsers = article.getLikedUsers() + "," + user.getId();
+
+        Integer articleLikes = article.getArticleLikes() + 1;
+
+        article.setArticleLikes(articleLikes);
+        article.setLikedUsers(likedUsers);
+
+        this.articleRepository.saveAndFlush(article);
+
+        return "redirect:/article/" + article.getId();
+
     }
 
 }
