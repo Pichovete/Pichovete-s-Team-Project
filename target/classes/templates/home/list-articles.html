@@ -14,9 +14,7 @@
                                 <img th:src="@{http://localhost:8080/images/vector-video-player-941434_960_720.png}" width="400"/>
                             </a>
                         </p>
-
                         <small class="author" th:text="${article.author.fullName}"></small>
-
                         <p>
                             <text class="text text-primary">Tags:
                             <a class="btn btn-primary btn-xs" th:each="tag:${article.tags}" th:href="@{/tag/{name}(name=${tag.name})}" th:text="${tag.name}"></a>
