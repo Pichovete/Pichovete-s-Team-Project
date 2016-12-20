@@ -1,7 +1,7 @@
 <main>
     <div class="container body-content span=8 offset=2">
         <div class="well">
-            <form class="form-horizontal" th:action="@{/user/edit/{id}(id=${user.id})}" method="post">
+            <form class="form-horizontal" th:action="@{/user/edit/{id}(id=${user.id})}" method="post" enctype="multipart/form-data">
                 <fieldset>
                     <legend>Edit User</legend>
                     <div class="form-group">
@@ -40,7 +40,12 @@
                                    name="address" th:value="${user.address}"/>
                         </div>
                     </div>
-
+                    <div class="form-group">
+                        <label class="col-sm-4 control-label" for="user_picture">Change profile photo</label>
+                        <div class="col-sm-4 ">
+                            <input  type="file"  id="user_picture" name="picture"/>
+                        </div>
+                    </div>
                     <div class="form-group">
                         <div class="col-sm-4 col-sm-offset-4">
                             <a class="btn btn-default" th:href="@{/profile}">Cancel</a>

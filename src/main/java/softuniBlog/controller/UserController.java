@@ -49,7 +49,7 @@ public class UserController {
     }
 
     @PostMapping("/register")
-    public String registerProcess(UserBindingModel userBindingModel, RedirectAttributes redirectAttributes,@RequestParam(required = false, name = "picture") MultipartFile multipartFile){
+    public String registerProcess(UserBindingModel userBindingModel, RedirectAttributes redirectAttributes){
 
         if (!userBindingModel.getPassword().equals(userBindingModel.getConfirmPassword())) {
             redirectAttributes.addFlashAttribute("errors", "Passwords do not match");
@@ -90,7 +90,7 @@ public class UserController {
             File imageFile=new File(root + "\\src\\main\\resources\\static\\images\\", originalFileName);
 
             try {
-                multipartFile.transferTo(imageFile);
+                file.transferTo(imageFile);
                 user.setPicture(originalFileName);
             } catch (IOException e) {
                 e.printStackTrace();
@@ -171,9 +171,27 @@ public class UserController {
             }
         }
 
+        String root = System.getProperty("user.dir");
+
+        MultipartFile file = userBindingModel.getPicture();
+        if (file != null){
+            String originalFileName = user.getFullName() + file.getOriginalFilename();
+            File imageFile=new File(root + "\\src\\main\\resources\\static\\images\\", originalFileName);
+
+            try {
+                file.transferTo(imageFile);
+                user.setPicture(originalFileName);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+
+
+        }
+
         user.setFullName(userBindingModel.getFullName());
         user.setEmail(userBindingModel.getEmail());
         user.setAddress(userBindingModel.getAddress());
+
 
         this.userRepository.saveAndFlush(user);
 

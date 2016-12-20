@@ -134,6 +134,7 @@ public class AdminUserController {
             this.articleRepository.delete(article);
         }
 
+
         this.userRepository.delete(user);
 
         return "redirect:/admin/users/";
