@@ -139,6 +139,11 @@ public class User {
     }
 
     @Transient
+    public  boolean isDisiked(Set<String> dislikedUsers){
+        return dislikedUsers.contains(this.getId().toString());
+    }
+
+    @Transient
     public boolean isAuthor(Article article){
         return Objects.equals(this.getId(),
                 article.getAuthor().getId());

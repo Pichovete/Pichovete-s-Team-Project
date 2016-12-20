@@ -22,9 +22,13 @@ public class Article {
 
     private Integer articleLikes;
 
+    private Integer articleDislikes;
+
     private String likedUsers;
 
-    public Article(String title, String content,String description, User author, Category category, HashSet<Tag> tags, Integer articleLikes, String likedUsers) {
+    private String dislikedUsers;
+
+    public Article(String title, String content,String description, User author, Category category, HashSet<Tag> tags, Integer articleLikes, String likedUsers, Integer articleDislikes, String dislikedUsers) {
         this.title = title;
         this.content = content;
         this.description=description;
@@ -33,6 +37,8 @@ public class Article {
         this.tags = tags;
         this.articleLikes = articleLikes;
         this.likedUsers = likedUsers;
+        this.articleDislikes = articleDislikes;
+        this.dislikedUsers = dislikedUsers;
 
     }
 
@@ -127,6 +133,24 @@ public class Article {
 
     public void setLikedUsers(String likedUsers) {
         this.likedUsers = likedUsers;
+    }
+
+    @Column(name = "articleDislikes")
+    public Integer getArticleDislikes() {
+        return articleDislikes;
+    }
+
+    public void setArticleDislikes(Integer articleDislikes) {
+        this.articleDislikes = articleDislikes;
+    }
+
+    @Column(name = "dislikedUsers")
+    public String getDislikedUsers() {
+        return dislikedUsers;
+    }
+
+    public void setDislikedUsers(String dislikedUsers) {
+        this.dislikedUsers = dislikedUsers;
     }
 
     @Transient

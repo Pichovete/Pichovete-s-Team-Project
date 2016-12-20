@@ -4,7 +4,7 @@ ColWidths_connform.ListSessions<|||>1<|||>163,50,50,50,50,50,53
 ColsVisible_connform.ListSessions<|||>1<|||>0
 ColPositions_connform.ListSessions<|||>1<|||>0,1,2,3,4,5,6
 ColSort_connform.ListSessions<|||>1<|||>0,0
-ColWidths_frmTableEditor.listColumns<|||>1<|||>54,100,156,90,60,65,50,119,130,140,100,100
+ColWidths_frmTableEditor.listColumns<|||>1<|||>60,100,156,90,60,65,50,119,130,140,100,100
 ColsVisible_frmTableEditor.listColumns<|||>1<|||>0,1,2,3,4,5,6,7,8,9,10,11
 ColPositions_frmTableEditor.listColumns<|||>1<|||>0,1,2,3,4,5,6,7,8,9,10,11
 ColSort_frmTableEditor.listColumns<|||>1<|||>-1,0
@@ -78,9 +78,9 @@ Servers\course\SSL_Cert<|||>1<|||>
 Servers\course\SSL_CA<|||>1<|||>
 Servers\course\SSL_Cipher<|||>1<|||>
 Servers\course\ServerVersionFull<|||>1<|||>10.1.13-MariaDB - mariadb.org binary distribution
-Servers\course\ConnectCount<|||>3<|||>12
+Servers\course\ConnectCount<|||>3<|||>14
 Servers\course\ServerVersion<|||>3<|||>100113
-Servers\course\LastConnect<|||>1<|||>2016-12-20 15:39:22
+Servers\course\LastConnect<|||>1<|||>2016-12-20 16:58:48
 Servers\course\lastUsedDB<|||>1<|||>java_blog
 Servers\Unnamed\SessionCreated<|||>1<|||>2016-12-15 16:06:22
 Servers\Unnamed\Host<|||>1<|||>127.0.0.1

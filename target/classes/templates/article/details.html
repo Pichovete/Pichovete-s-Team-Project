@@ -53,8 +53,8 @@
                         </td>
                         <td>
                             <p>
-                                <a th:href="@{/article/{id}/like(id=${article.id})}"><img class="hidden-md hidden-xs"  th:src="@{/images/grumpy-face-clipart-1.jpg}" width="50" height="50" /></a>
-                                <span th:text="${article.articleLikes}"></span>
+                                <a th:href="@{/article/{id}/dislike(id=${article.id})}"><img class="hidden-md hidden-xs"  th:src="@{/images/grumpy-face-clipart-1.jpg}" width="50" height="50" /></a>
+                                <span th:text="${article.articleDislikes}"></span>
                             </p>
                         </td>
                     </table>

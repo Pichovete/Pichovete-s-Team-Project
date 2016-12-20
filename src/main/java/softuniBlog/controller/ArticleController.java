@@ -66,7 +66,11 @@ public class ArticleController {
 
         Integer articleLikes = 0;
 
+        Integer articleDislikes = 0;
+
         String likedUsers = "";
+
+        String dislikedUsers = "";
 
         Article articleEntity = new Article(
                 articleBindingModel.getTitle(),
@@ -76,7 +80,10 @@ public class ArticleController {
                 category,
                 tags,
                 articleLikes,
-                likedUsers
+                likedUsers,
+                articleDislikes,
+                dislikedUsers
+
         );
 
         this.articleRepository.saveAndFlush(articleEntity);
@@ -244,7 +251,13 @@ public class ArticleController {
 
         Set<String> likes = new HashSet<String>(Arrays.asList(article.getLikedUsers().split(",")));
 
+        Set<String> dislikes = new HashSet<String>(Arrays.asList(article.getDislikedUsers().split(",")));
+
         if(user.isLiked(likes)){
+            return "redirect:/article/" + article.getId();
+        }
+
+        if(user.isDisiked(dislikes)){
             return "redirect:/article/" + article.getId();
         }
 
@@ -259,6 +272,41 @@ public class ArticleController {
 
         return "redirect:/article/" + article.getId();
 
+    }
+
+    @GetMapping("/article/{id}/dislike")
+    @PreAuthorize("isAuthenticated()")
+    public String dislikeProccess(@PathVariable Integer id){
+        UserDetails principal = (UserDetails) SecurityContextHolder.getContext()
+                .getAuthentication()
+                .getPrincipal();
+
+        User user = this.userRepository.findByEmail(principal.getUsername());
+
+        Article article = this.articleRepository.findOne(id);
+
+        Set<String> dislikes = new HashSet<String>(Arrays.asList(article.getDislikedUsers().split(",")));
+
+        Set<String> likes = new HashSet<String>(Arrays.asList(article.getLikedUsers().split(",")));
+
+        if(user.isDisiked(dislikes)){
+            return "redirect:/article/" + article.getId();
+        }
+
+        if(user.isLiked(likes)){
+            return "redirect:/article/" + article.getId();
+        }
+
+        String dislikedUsers = article.getDislikedUsers() + "," + user.getId();
+
+        Integer articleDislikes = article.getArticleDislikes() + 1;
+
+        article.setArticleDislikes(articleDislikes);
+        article.setDislikedUsers(dislikedUsers);
+
+        this.articleRepository.saveAndFlush(article);
+
+        return "redirect:/article/" + article.getId();
     }
 
 }
