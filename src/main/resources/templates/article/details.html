@@ -30,11 +30,12 @@
                             </td>
                         </tr>
                     </table>
-                    <small class="author" th:text="${article.author.fullName}"></small>
+                    <span>Author: </span>
+                    <a th:href="@{/profile/{id}(id=${article.author.id})}"><span class="author" th:text="${article.author.fullName}"></span></a>
 
                     <p>
-                        <a class="btn btn-default btn-xs" th:each="tag:${article.tags}"
-                           th:href="@{/tag/{name}(name=${tag.name})}" th:text="${tag.name}"></a>
+                        <span>Tags: </span>
+                        <a class="btn btn-default btn-xs" th:each="tag:${article.tags}" th:href="@{/tag/{name}(name=${tag.name})}" th:text="${tag.name}"></a>
                     </p>
 
                     <table>

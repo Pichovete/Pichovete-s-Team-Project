@@ -14,11 +14,11 @@
                                 <img th:src="@{http://localhost:8080/images/vector-video-player-941434_960_720.png}" width="400"/>
                             </a>
                         </p>
-                        <small class="author" th:text="${article.author.fullName}"></small>
+                        <span>Author: </span>
+                        <a th:href="@{/profile/{id}(id=${article.author.id})}"><span class="author" th:text="${article.author.fullName}"></span></a>
                         <p>
-                            <text class="text text-primary">Tags:
-                            <a class="btn btn-primary btn-xs" th:each="tag:${article.tags}" th:href="@{/tag/{name}(name=${tag.name})}" th:text="${tag.name}"></a>
-                            </text>
+                            <span>Tags: </span>
+                            <a class="btn btn-default btn-xs" th:each="tag:${article.tags}" th:href="@{/tag/{name}(name=${tag.name})}" th:text="${tag.name}"></a>
                         </p>
 
                         <footer>

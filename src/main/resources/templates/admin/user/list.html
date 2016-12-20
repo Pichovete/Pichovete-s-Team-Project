@@ -20,6 +20,7 @@
                             <td th:text="${user.fullName}"></td>
                             <td th:text="${user.email}"></td>
                             <td>
+                                <a th:href="@{/profile/{id}(id=${user.id})}">Profile</a>
                                 <a th:href="@{/admin/users/edit/{id}(id=${user.id})}">Edit</a>
                                 <a th:href="@{/admin/users/delete/{id}(id=${user.id})}">Delete</a>
                             </td>

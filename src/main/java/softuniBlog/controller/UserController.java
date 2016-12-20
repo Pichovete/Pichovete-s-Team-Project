@@ -148,6 +148,32 @@ public class UserController {
         return "base-layout";
     }
 
+    @GetMapping("/profile/{id}")
+    @PreAuthorize("isAuthenticated()")
+    public String userProfilePage(@PathVariable Integer id ,Model model){
+        List<Category> categories = categoryRepository.findAll();
+        User user = this.userRepository.findOne(id);
+
+        UserDetails principal = (UserDetails) SecurityContextHolder.getContext()
+                .getAuthentication()
+                .getPrincipal();
+
+        User userEntity = this.userRepository.findByEmail(principal.getUsername());
+
+        if(userEntity.getId().equals(user.getId())) {
+            model.addAttribute("categories", categories);
+            model.addAttribute("user", user);
+            model.addAttribute("view", "user/profile");
+            return "base-layout";
+        }
+
+        model.addAttribute("categories", categories);
+        model.addAttribute("user", user);
+        model.addAttribute("view", "user/profilePage");
+
+        return "base-layout";
+    }
+
     @GetMapping("/user/edit/{id}")
     @PreAuthorize("isAuthenticated()")
     public String edit(@PathVariable Integer id, Model model){

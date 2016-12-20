@@ -75,6 +75,8 @@ public class HomeController {
 
         System.out.println(query);
 
+        List<Category> categories = this.categoryRepository.findAll();
+
         List<Article> articles = this.articleRepository.findAll();
 
         List<Article> foundArticles = new ArrayList<>();
@@ -86,6 +88,7 @@ public class HomeController {
             }
         }
 
+        model.addAttribute("categories", categories);
         model.addAttribute("articles", foundArticles);
         model.addAttribute("view", "home/search");
 
