@@ -30,7 +30,6 @@ public class User {
 
     private Set<Article> articles;
 
-    private Set<Article> likedArticles;
 
 
     public User(String email, String fullName, String password, String address, String picture) {
@@ -126,15 +125,6 @@ public class User {
         this.picture = picture;
     }
 
-
-    @ManyToMany
-    public Set<Article> getLikedArticles() {
-        return likedArticles;
-    }
-
-    public void setLikedArticles(Set<Article> likedArticles) {
-        this.likedArticles = likedArticles;
-    }
 
     @Transient
     public boolean isAdmin(){

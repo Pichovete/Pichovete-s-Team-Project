@@ -6923,3 +6923,10 @@ div.vertical-line {
      if this fits better with your design */
 }
 
+.fa-thumbs-o-up:before {
+  content: "\f087";
+}
+.fa-thumbs-o-down:before {
+  content: "\f088";
+}
+

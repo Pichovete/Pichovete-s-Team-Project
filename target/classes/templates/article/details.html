@@ -37,9 +37,27 @@
                            th:href="@{/tag/{name}(name=${tag.name})}" th:text="${tag.name}"></a>
                     </p>
 
-                    <p>
-                        <a  class="btn btn-success btn-xs" th:href="@{/article/{id}/like(id=${article.id})}" >Like<span th:text="${article.articleLikes}"></span></a>
-                    </p>
+                    <table>
+                        <td>
+                            <p>
+                                <a th:href="@{/article/{id}/like(id=${article.id})}"><img class="hidden-md hidden-xs"  th:src="@{/images/4i9onb46T.png}" width="60" height="50" /></a>
+                                <span th:text="${article.articleLikes}"></span>
+                            </p>
+                        </td>
+                        <td>
+                        <td width="20" height="70" style="border-collapse: separate; padding-left: 20px;padding-right: 20px; vertical-align: top">
+                            <div class="vertical-line" >
+                                <p></p>
+                            </div>
+                        </td>
+                        </td>
+                        <td>
+                            <p>
+                                <a th:href="@{/article/{id}/like(id=${article.id})}"><img class="hidden-md hidden-xs"  th:src="@{/images/grumpy-face-clipart-1.jpg}" width="50" height="50" /></a>
+                                <span th:text="${article.articleLikes}"></span>
+                            </p>
+                        </td>
+                    </table>
 
 
                     <footer>
