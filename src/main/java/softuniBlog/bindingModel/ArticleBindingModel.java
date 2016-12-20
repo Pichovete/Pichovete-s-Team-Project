@@ -32,7 +32,7 @@ public class ArticleBindingModel {
     }
 
     public String getContent() {
-        return content.substring(32);
+        return content;
     }
 
     public void setContent(String content) {

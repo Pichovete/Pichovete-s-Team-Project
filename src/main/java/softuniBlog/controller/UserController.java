@@ -43,6 +43,9 @@ public class UserController {
 
     @GetMapping("/register")
     public String register(Model model) {
+        List<Category> categories = this.categoryRepository.findAll();
+        model.addAttribute("categories", categories);
+
         model.addAttribute("view", "user/register");
 
         return "base-layout";
@@ -108,6 +111,9 @@ public class UserController {
 
     @GetMapping("/login")
     public String login(Model model){
+        List<Category> categories = this.categoryRepository.findAll();
+        model.addAttribute("categories", categories);
+
         model.addAttribute("view", "user/login");
 
         return "base-layout";

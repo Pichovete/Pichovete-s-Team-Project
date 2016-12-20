@@ -146,7 +146,7 @@ public class ArticleController {
 
         HashSet<Tag> tags = this.findTagsFromString(articleBindingModel.getTagString());
 
-        article.setContent(articleBindingModel.getContent());
+        article.setContent(articleBindingModel.getContent().substring(32));
         article.setDescription(articleBindingModel.getDescription());
         article.setTitle(articleBindingModel.getTitle());
         article.setCategory(category);
