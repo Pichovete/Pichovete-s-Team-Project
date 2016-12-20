@@ -22,12 +22,17 @@ public class HomeController {
 
     @Autowired
     private CategoryRepository categoryRepository;
+    @Autowired
+    private ArticleRepository articleRepository;
 
     @GetMapping("/")
     public String index(Model model) {
 
         List<Category> categories = this.categoryRepository.findAll();
 
+        List<Article> articles = this.articleRepository.findAll();
+
+        model.addAttribute("articles", articles);
         model.addAttribute("view", "home/index");
         model.addAttribute("categories", categories);
 
