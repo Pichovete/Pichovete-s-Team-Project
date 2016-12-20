@@ -30,7 +30,7 @@ public class User {
 
     private Set<Article> articles;
 
-
+    private Set<Comment> comments;
 
     public User(String email, String fullName, String password, String address, String picture) {
         this.email = email;
@@ -123,6 +123,15 @@ public class User {
 
     public void setPicture(String picture) {
         this.picture = picture;
+    }
+
+    @OneToMany(mappedBy = "user")
+    public Set<Comment> getComments() {
+        return comments;
+    }
+
+    public void setComments(Set<Comment> comments) {
+        this.comments = comments;
     }
 
 

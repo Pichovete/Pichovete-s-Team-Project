@@ -28,6 +28,8 @@ public class Article {
 
     private String dislikedUsers;
 
+    private Set<Comment> comments;
+
     public Article(String title, String content,String description, User author, Category category, HashSet<Tag> tags, Integer articleLikes, String likedUsers, Integer articleDislikes, String dislikedUsers) {
         this.title = title;
         this.content = content;
@@ -156,5 +158,13 @@ public class Article {
     @Transient
     public Integer likeCount(Set<String> likes){
         return likes.size();
+    }
+    @OneToMany(mappedBy = "article")
+    public Set<Comment> getComments() {
+        return comments;
+    }
+
+    public void setComments(Set<Comment> comments) {
+        this.comments = comments;
     }
 }

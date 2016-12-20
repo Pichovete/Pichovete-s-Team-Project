@@ -70,40 +70,20 @@
                                 <a class="btn btn-danger btn-xs" th:href="@{/article/delete/{id}(id = ${article.id})}">Delete</a>
                             </th:block>
                             <th:block sec:authorize="isAuthenticated()">
-                                <a class="btn btn-primary btn-xs" type="button" data-toggle="modal"
-                                   data-target="#myModal">Comment</a>
+                                <a class="btn btn-default" th:href="@{/article/comment/{id}(id = ${article.id})}">Comment</a>
                             </th:block>
-                            <div id="myModal" class="modal fade" role="dialog">
-                                <div class="modal-dialog">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                            <button type="button" class="close" data-dismiss="modal"
-                                                    aria-hidden="true">&times;</button>
-                                            <h4 class="modal-title">Comment</h4>
-                                        </div>
-                                        <div class="modal-body form-group">
-                                            <div class="col-lg-10">
-                                                <textarea class="form-control" rows="3" id="textArea"></textarea>
-                                            </div>
-                                        </div>
-                                        <div class="modal-footer">
-                                            <button type="button" class="btn btn-primary">Submit</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <a class="btn btn-default btn-xs" th:href="@{/category/{id}(id= ${article.category.id})}">back &raquo;</a>
                         </div>
+                        <a class="btn btn-default btn-xs" th:href="@{/category/{id}(id= ${article.category.id})}">back &raquo;</a>
                         <br>
                         <h3><p class="text-success">Comments:</p></h3>
-                        <div class="bottom-right">
-                            <p>
-                                <blockquote class="blockquote">
-                            <p><h4>The comment is placed here!</h4></p>
-                            <small><cite title="Source Title">Comment author</cite></small>
+                        <th:block th:each="comment : ${comments}">
+                            <blockquote class="blockquote">
+                                <p>
+                                    <a>&quot;</a><a th:text="${comment.text}"></a><a>&quot;</a>
+                                </p>
+                                <b><cite title="Source Title" th:text="${comment.user.fullName}"></cite></b><a> / </a><small th:text="${comment.date}"></small>
                             </blockquote>
-                            </p>
-                        </div>
+                        </th:block>
                         </br>
                     </footer>
                 </div>

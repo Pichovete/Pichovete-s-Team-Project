@@ -11,19 +11,11 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import softuniBlog.bindingModel.ArticleBindingModel;
-import softuniBlog.entity.Article;
-import softuniBlog.entity.Category;
-import softuniBlog.entity.Tag;
-import softuniBlog.entity.User;
-import softuniBlog.repository.ArticleRepository;
-import softuniBlog.repository.CategoryRepository;
-import softuniBlog.repository.TagRepository;
-import softuniBlog.repository.UserRepository;
+import softuniBlog.bindingModel.CommentBindingModel;
+import softuniBlog.entity.*;
+import softuniBlog.repository.*;
 
-import java.util.Arrays;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 import java.util.stream.Collectors;
 
 @Controller
@@ -39,6 +31,9 @@ public class ArticleController {
 
     @Autowired
     private TagRepository tagRepository;
+
+    @Autowired
+    private CommentRepository commentRepository;
 
     @GetMapping("/article/create")
     @PreAuthorize("isAuthenticated()")
@@ -111,11 +106,50 @@ public class ArticleController {
 
         List<Category> categories = this.categoryRepository.findAll();
 
+        List<Comment> comments = new ArrayList<>();
+        Collections.sort(comments, new Comparator<Comment>() {
+            public int compare(Comment o1, Comment o2) {
+                return o1.getDate().compareTo(o2.getDate());
+            }
+        });
+
+
+        for (Comment comment : article.getComments()) {
+            comments.add(comment);
+        }
+
         model.addAttribute("categories", categories);
         model.addAttribute("article", article);
+        model.addAttribute("comments", comments);
         model.addAttribute("view", "article/details");
 
         return "base-layout";
+    }
+    @GetMapping("/article/comment/{id}")
+    public String commentGet(Model model,@PathVariable Integer id){
+        Article article = this.articleRepository.findOne(id);
+        User author = article.getAuthor();
+        model.addAttribute("view","article/comment");
+        model.addAttribute("article", article);
+        return "base-layout";
+    }
+    @PostMapping("/article/comment/{id}")
+    public String commentPost(CommentBindingModel commentBindingModel, @PathVariable Integer id){
+        Article article = this.articleRepository.findOne(id);
+        UserDetails principal = (UserDetails) SecurityContextHolder.getContext()
+                .getAuthentication().getPrincipal();
+
+        User user = this.userRepository.findByEmail(principal.getUsername());
+        Date date=new Date();
+        Comment comment=new Comment(
+                commentBindingModel.getCommentString(),
+                article,
+                user,
+                date
+        );
+        this.commentRepository.saveAndFlush(comment);
+
+        return "redirect:/article/" + id;
     }
 
     @GetMapping("/article/edit/{id}")
