@@ -64,11 +64,13 @@ public class UserController {
 
             return "redirect:/register";
         }
-        //if (userForReg.getEmail().equals(userBindingModel.getEmail())){
-        //    redirectAttributes.addFlashAttribute("errors", "User with the same email already exist.");
+        boolean userAlreadyExists = this.userRepository.findByEmail(userBindingModel.getEmail()) != null;
 
-        //    return "redirect:/register";
-        //}
+        if (userAlreadyExists){
+            redirectAttributes.addFlashAttribute("errors", "User with the same email already exist.");
+
+            return "redirect:/register";
+        }
 
         BCryptPasswordEncoder bCryptPasswordEncoder = new BCryptPasswordEncoder();
 
