@@ -179,10 +179,21 @@ public class UserController {
     @GetMapping("/user/edit/{id}")
     @PreAuthorize("isAuthenticated()")
     public String edit(@PathVariable Integer id, Model model){
-
-
-
         User user = this.userRepository.findOne(id);
+
+        UserDetails principal = (UserDetails) SecurityContextHolder.getContext()
+                .getAuthentication()
+                .getPrincipal();
+
+        User userEntity = this.userRepository.findByEmail(principal.getUsername());
+
+        if(!user.getId().equals(userEntity.getId())){
+
+            model.addAttribute("user", user);
+            model.addAttribute("view", "error/403");
+
+            return "base-layout";
+        }
 
         model.addAttribute("user", user);
         model.addAttribute("view", "user/edit");

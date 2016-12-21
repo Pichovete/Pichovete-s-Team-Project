@@ -10,6 +10,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import softuniBlog.bindingModel.ArticleBindingModel;
 import softuniBlog.bindingModel.CommentBindingModel;
 import softuniBlog.entity.*;
@@ -273,7 +274,7 @@ public class ArticleController {
 
     @GetMapping("/article/{id}/like")
     @PreAuthorize("isAuthenticated()")
-    public String likeProccess(@PathVariable Integer id){
+    public String likeProccess(@PathVariable Integer id, RedirectAttributes redirectAttributes){
 
         UserDetails principal = (UserDetails) SecurityContextHolder.getContext()
                 .getAuthentication()
@@ -288,10 +289,12 @@ public class ArticleController {
         Set<String> dislikes = new HashSet<String>(Arrays.asList(article.getDislikedUsers().split(",")));
 
         if(user.isLiked(likes)){
+            redirectAttributes.addFlashAttribute("errors", "You already have liked this post!");
             return "redirect:/article/" + article.getId();
         }
 
         if(user.isDisiked(dislikes)){
+            redirectAttributes.addFlashAttribute("errors", "You already have disliked this post!");
             return "redirect:/article/" + article.getId();
         }
 
@@ -310,7 +313,7 @@ public class ArticleController {
 
     @GetMapping("/article/{id}/dislike")
     @PreAuthorize("isAuthenticated()")
-    public String dislikeProccess(@PathVariable Integer id){
+    public String dislikeProccess(@PathVariable Integer id, RedirectAttributes redirectAttributes){
         UserDetails principal = (UserDetails) SecurityContextHolder.getContext()
                 .getAuthentication()
                 .getPrincipal();
@@ -324,10 +327,12 @@ public class ArticleController {
         Set<String> likes = new HashSet<String>(Arrays.asList(article.getLikedUsers().split(",")));
 
         if(user.isDisiked(dislikes)){
+            redirectAttributes.addFlashAttribute("errors", "You already have disliked this post!");
             return "redirect:/article/" + article.getId();
         }
 
         if(user.isLiked(likes)){
+            redirectAttributes.addFlashAttribute("errors", "You already have liked this post!");
             return "redirect:/article/" + article.getId();
         }
 

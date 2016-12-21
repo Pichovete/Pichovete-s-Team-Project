@@ -1,5 +1,8 @@
 <main>
     <div class="container body-content">
+        <div class="alert alert-info" th:if="${errors}">
+            <strong th:text="${errors}"></strong>
+        </div>
         <div class="row">
             <div class="col-md-12">
                 <div>
